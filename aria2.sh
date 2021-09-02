@@ -15,7 +15,7 @@
 sh_ver="2.7.4"
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin
 aria2_conf_dir="/root/.aria2c"
-download_path="/root/downloads"
+download_path="/nfs/downloads"
 aria2_conf="${aria2_conf_dir}/aria2.conf"
 aria2_log="${aria2_conf_dir}/aria2.log"
 aria2c="/usr/local/bin/aria2c"
@@ -491,10 +491,10 @@ Read_config() {
 View_Aria2() {
     check_installed_status
     Read_config
-    IPV4=$(
-        wget -qO- -t1 -T2 -4 api.ip.sb/ip ||
-            wget -qO- -t1 -T2 -4 ifconfig.io/ip ||
-            wget -qO- -t1 -T2 -4 www.trackip.net/ip
+    IPV4=$(ufw.rjftrust.com
+        # wget -qO- -t1 -T2 -4 api.ip.sb/ip ||
+        #     wget -qO- -t1 -T2 -4 ifconfig.io/ip ||
+        #     wget -qO- -t1 -T2 -4 www.trackip.net/ip
     )
     IPV6=$(
         wget -qO- -t1 -T2 -6 api.ip.sb/ip ||
