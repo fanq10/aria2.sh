@@ -491,11 +491,11 @@ Read_config() {
 View_Aria2() {
     check_installed_status
     Read_config
-    IPV4=$(ufw.rjftrust.com
+    IPV4=$(ufw.rjftrust.com)
         # wget -qO- -t1 -T2 -4 api.ip.sb/ip ||
         #     wget -qO- -t1 -T2 -4 ifconfig.io/ip ||
         #     wget -qO- -t1 -T2 -4 www.trackip.net/ip
-    )
+        
     IPV6=$(
         wget -qO- -t1 -T2 -6 api.ip.sb/ip ||
             wget -qO- -t1 -T2 -6 ifconfig.io/ip ||
